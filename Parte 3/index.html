@@ -31,6 +31,21 @@ Crea una funcion llamada: challenge1  que realice lo siguiente:
 
 // CREA TU FUNCION challenge1 aqui 
 
+function challenge1(){
+    var person = prompt("cuantos botones necesitas?");
+
+    for(var i=0; i< person;i ++){
+        nombres[i];
+        var ref = document.getElementById("dummy")
+        var aux = document.createElement("button")
+        if(i < nombres.length){
+           aux.textContent = nombres[i];
+           ref.appendChild(aux);  
+        }
+       
+    }
+}
+
 
 
 // ************** PARTE 2    **************
@@ -41,6 +56,16 @@ Crea una funcion llamada: challenge2 que utilizando un FOR convierta todos los n
 **/
 
 // CREA TU FUNCION challenge2 2 aquí.
+
+function challenge2(){
+
+
+    for(var i = 0; i < nombres.length; i++){
+
+        console.log(nombres[i].toUpperCase());
+    }
+}
+
 
 
 
@@ -67,7 +92,24 @@ Deberia escribir en consola la concatenación de nombre + color + raza para el o
 Invoca la función para validar su funcionalidad.
 
 */
+function Dog(nombre, color, raza){
+    this.nombre = nombre;
+    this.color = color;
+    this.raza = raza;
+}
 
+var mascotaUno = new Dog("benji", "negro", "labrador");
+console.log(mascotaUno)
+var mascotaDos = new Dog("romeo", "cafe", "pastor aleman");
+console.log(mascotaDos)
+var mascotaTres = new Dog("raul", "cafe", "chihuahua");
+console.log(mascotaTres)
+
+function printInfo(Dog){
+    console.log("Nombre.- " + Dog.nombre + " color.- " + Dog.color + " raza.- " + Dog.raza )
+}
+
+printInfo(mascotaUno)
 
 
 
@@ -80,7 +122,7 @@ Invoca la función para validar su funcionalidad.
 
     <button onclick="challenge1()">Challenge 1</button>
     <button onclick="challenge2()">Challenge 2</button>
-    <button onclick="challenge3()">Challenge 2</button>
+    <button onclick="challenge3()">Challenge 3</button>
 
   
 <div id = "dummy">
